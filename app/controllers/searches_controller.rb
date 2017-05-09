@@ -3,7 +3,7 @@ class SearchesController < ApplicationController
     @tags =
       if params[:query].present?
         Tag.search params[:query], operator: "or", suggest: true,
-        match: :word_start
+          fields: [:name], match: :word_start
       else
         Array.new
       end

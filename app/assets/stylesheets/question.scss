@@ -4,6 +4,11 @@ $orange: #ff7361;
 $white: #fff;
 $cl-border: #dedede;
 $cl-division: #e0e0e0;
+$green: #338338;
+$red: #990707;
+$bg-vote: #eee;
+$color-vote: #666;
+$gray: #bdbdbd;
 
 .btn-add-answer {
   color: $blue;
@@ -81,8 +86,8 @@ $cl-division: #e0e0e0;
   background-color: $orange;
   color: $white;
   font-size: 14px;
-  padding: 7px 15px;
   margin-right: 20px;
+  padding: 7px 15px;
 }
 
 .display-vote {
@@ -97,21 +102,21 @@ $cl-division: #e0e0e0;
   }
 
   .action-vote {
-    bottom: 0px;
+    bottom: 0;
   }
 }
 
 .action-vote {
-  width: 200px;
-  position: relative;
   bottom: 5px;
+  position: relative;
+  width: 200px;
 
   li {
     float: left;
 
     input {
-      background-color: #eee;
-      color: #666;
+      background-color: $bg-vote;
+      color: $color-vote;
       margin-left: 10px;
     }
   }
@@ -122,25 +127,26 @@ $cl-division: #e0e0e0;
 
   .vote-up {
     input:hover {
-      background-color: #338338;
-      color: #fff;
+      background-color: $green;
+      color: $white;
     }
   }
 
   .vote-down:hover {
     input:hover {
-      background-color: #990707;
-      color: #fff;
+      background-color: $red;
+      color: $white;
     }
   }
 
   .btn-vote-up {
-    background-color: #338338;
-    color: #fff;
+    background-color: $green;
+    color: $white;
   }
+
   .btn-vote-down {
-    background-color: #990707;
-    color: #fff;
+    background-color: $red;
+    color: $white;
   }
 }
 
@@ -179,4 +185,22 @@ $cl-division: #e0e0e0;
 
 .collection:hover .comment-action {
   display: initial;
+}
+
+.form-create-question {
+  background-color: $white;
+
+  .create-header {
+    text-align: center;
+    padding-top: 15px;
+    color: $color-vote;
+  }
+}
+
+.form-new-question {
+  margin: 10px;
+
+  select {
+    border: 1px solid $gray;
+  }
 }
