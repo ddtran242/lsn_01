@@ -17,13 +17,13 @@
         <span><%= time_ago_in_words question.created_at %></span>
       </p>
       <div>
-        <% if details[:highlight][:title] %>
+        <% if !details.empty? && details[:highlight][:title] %>
           <h5><%= link_to simple_format(details[:highlight][:title]),
             question %></h5>
         <% else %>
           <h4><%= link_to question.title, question %></h4>
         <% end %>
-        <% if details[:highlight][:content] %>
+        <% if !details.empty? && details[:highlight][:content] %>
           <p><%= simple_format details[:highlight][:content] %></p>
         <% else %>
           <p><%= question.content.html_safe %></p>

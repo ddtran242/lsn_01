@@ -38,7 +38,7 @@
         <strong><%= time_ago_in_words question.created_at %></strong>
         <strong class="space"></strong>
         <i class="material-icons">speaker_notes</i>
-        <strong><%= question.answers.count %><%= t "answers" %></strong>
+        <strong><%= pluralize question.answers.count, t("answers") %></strong>
         <strong class="space"></strong>
         <i class="material-icons"><%= t "text.grade" %></i>
         <strong><%= question.vote_count %></strong>

@@ -114,3 +114,4 @@ config/settings/
 .scss-lint.yml
 /test/*
 .lock-*
+public

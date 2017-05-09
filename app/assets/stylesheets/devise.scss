@@ -1,0 +1,19 @@
+$white: #fff;
+$light-gray: #dedede;
+
+.sign-in,
+.sign-up {
+  background-color: $white;
+  border: 1px solid $light-gray;
+  box-shadow: 0 0 5px $light-gray;
+  padding: 15px;
+
+  h2 {
+    margin: -.22rem 0 1.424rem;
+  }
+
+  .actions {
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+}

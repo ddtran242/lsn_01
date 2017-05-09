@@ -21,6 +21,9 @@
             <div class="input-field">
               <%= search_field_tag :query, params[:query],
                 placeholder: t("search_question_title"), class: "search-input" %>
+              <label class="label-icon" for="search">
+                <i class="material-icons"><%= t "search" %></i>
+              </label>
             </div>
           <% end %>
           <%= yield %>
