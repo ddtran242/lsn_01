@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     resources :categories, except: :show
     resources :users, only: :index
     resources :questions, only: :index
+    resources :dashboards, only: :index
   end
   resources :questions, only: :show
   resources :reports, only: [:new, :create, :destroy]

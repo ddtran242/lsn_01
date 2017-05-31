@@ -1,0 +1,123 @@
+<div class="row table-stat-dashboard">
+  <div class="daily-visits element-stat-dashboard">
+    <div class="content-element-dashboard">
+      <div class="image">
+        <span class="material-icons icon1">trending_up</span>
+      </div>
+      <span class="title"><%= t "admin.daily_visits" %></span>
+      <h2 class="number">
+        <span></span>
+      </h2>
+    </div>
+  </div>
+  <div class="new-users element-stat-dashboard">
+    <div class="content-element-dashboard">
+      <div class="image">
+        <span class="material-icons icon2">person_add</span>
+      </div>
+      <span class="title"><%= t "admin.new_users" %></span>
+      <h2 class="number">
+        <span><%= @support_stat_dashboard.new_user %></span>
+      </h2>
+    </div>
+  </div>
+  <div class="total-online element-stat-dashboard">
+    <div class="content-element-dashboard">
+      <div class="image">
+        <span class="material-icons icon3">timeline</span>
+      </div>
+      <span class="title"><%= t "admin.total_online" %></span>
+      <h2 class="number">
+        <span><%= @support_stat_dashboard.total_online %></span>
+      </h2>
+    </div>
+  </div>
+  <div class="no-of-visits element-stat-dashboard">
+    <div class="content-element-dashboard">
+      <div class="image">
+        <span class="material-icons icon4">trending_down</span>
+      </div>
+      <span class="title"><%= t "admin.no_of_visits" %></span>
+      <h2 class="number">
+        <span><%= @support_stat_dashboard.no_of_visits %></span>
+      </h2>
+    </div>
+  </div>
+</div>
+<div class="row graph-user">
+  <div class="col s8 graph-line-user">
+    <%= line_chart @support_stat_dashboard.graph_line_users.count,
+      library: {
+        title: {text: t("admin.graph_user_title"),
+          style: {color: "#29b6f6"}, x: -20},
+        yAxis: {allowDecimals: false, title:{text: t("admin.graph_user_y")}},
+        xAxis: {title: {text: t("admin.graph_user_x")}}
+      }
+    %>
+  </div>
+  <div class="col s4 graph-pie-user">
+    <%= pie_chart @support_stat_dashboard.graph_pie_users, donut: true,
+      library: {
+        title: {text: t("admin.graph_pie_user_title"),
+          style: {color: "#29b6f6"}},
+        colors: ["#81d4fa", "#999"],
+      } %>
+  </div>
+</div>
+
+<div class="row table-stat-dashboard">
+  <div class="feedbacks element-stat-dashboard">
+    <div class="content-element-dashboard">
+      <div class="image">
+        <span class="material-icons icon1">report</span>
+      </div>
+      <span class="title"><%= t "admin.feedbacks" %></span>
+      <h2 class="number">
+        <span><%= @support_stat_dashboard.feedbacks %></span>
+      </h2>
+    </div>
+  </div>
+  <div class="post-of-month element-stat-dashboard">
+    <div class="content-element-dashboard">
+      <div class="image">
+        <span class="material-icons icon2">mode_edit</span>
+      </div>
+      <span class="title"><%= t "admin.post_of_month" %></span>
+      <h2 class="number">
+        <span><%= @support_stat_dashboard.posts %></span>
+      </h2>
+    </div>
+  </div>
+  <div class="uploads element-stat-dashboard">
+    <div class="content-element-dashboard">
+      <div class="image">
+        <span class="material-icons icon3">file_upload</span>
+      </div>
+      <span class="title"><%= t "admin.uploads" %></span>
+      <h2 class="number">
+        <span></span>
+      </h2>
+    </div>
+  </div>
+  <div class="downloads element-stat-dashboard">
+    <div class="content-element-dashboard">
+      <div class="image">
+        <span class="material-icons icon4">file_download</span>
+      </div>
+      <span class="title"><%= t "admin.downloads" %></span>
+      <h2 class="number">
+        <span></span>
+      </h2>
+    </div>
+  </div>
+</div>
+<div class="row graph-post">
+  <%= area_chart @support_stat_dashboard.graph_posts.count,
+    library: {
+      title: {text: t("admin.graph_post_title"),
+        style: {color: "#29b6f6"}, x: -20},
+      yAxis: {allowDecimals: false, title:{text: t("admin.graph_post_y")}},
+      xAxis: {title: {text: t("admin.graph_post_x")}}
+    }
+  %>
+</div>
