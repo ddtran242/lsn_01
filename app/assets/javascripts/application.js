@@ -18,6 +18,8 @@
 //= require_tree .
 //= require materialize-sprockets
 //= require ckeditor/init
+//= require highcharts
+//= require chartkick
 $(document).ready(function(){
   $('.dropdown-button').dropdown();
   $('select').material_select('destroy');

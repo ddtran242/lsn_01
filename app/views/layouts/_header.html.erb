@@ -98,7 +98,7 @@
             <ul class="avatar-dropdown">
               <li><%= link_to t("link.profile"), user_path(current_user) %></li>
               <% if current_user.is_admin? %>
-                <li><%= link_to t("link.admin"), admin_reports_path %></li>
+                <li><%= link_to t("link.admin"), admin_dashboards_path %></li>
               <% end %>
               <li><%= link_to t("link.sign_out"), destroy_user_session_path,
                 method: :delete %></li>

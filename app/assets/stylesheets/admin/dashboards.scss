@@ -1,0 +1,79 @@
+$white: #fff;
+$box-shadow1: rgba(0, 0, 0, .12);
+$box-shadow2: rgba(0, 0, 0, .24);
+$icon1: rgb(216, 67, 21);
+$icon2: rgb(209, 228, 246);
+$icon3: rgb(139, 195, 74);
+$icon4: rgb(93, 64, 55);
+$title-element: #757575;
+
+.table-stat-dashboard {
+  position: relative;
+}
+
+.element-stat-dashboard {
+  background: $white;
+  box-shadow: 0 1px 3px $box-shadow1, 0 1px 2px $box-shadow2;
+  float: left;
+  margin-right: 19px;
+  width: 23%;
+}
+
+.content-element-dashboard {
+  padding: 16px;
+
+  .image {
+    float: right;
+    height: 60px;
+    margin-right: 5px;
+    margin-top: 10px;
+    max-width: 100%;
+    width: 60px;
+
+    span {
+      font-size: 50px;
+    }
+
+    .icon1 {
+      color: $icon1;
+    }
+
+    .icon2 {
+      color: $icon2;
+    }
+
+    .icon3 {
+      color: $icon3;
+    }
+
+    .icon4 {
+      color: $icon4;
+    }
+  }
+
+  .title {
+    color: $title-element;
+    font-size: 12px;
+  }
+
+  .number {
+    font-family: Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+    margin: 0;
+  }
+}
+
+.graph-post {
+  margin-right: 22px !important;
+}
+
+.graph-user {
+  margin-left: -10px !important;
+  margin-right: 15px !important;
+}
+
+.highcharts-container {
+  box-shadow: 0 1px 3px $box-shadow1, 0 1px 2px $box-shadow2;
+}
